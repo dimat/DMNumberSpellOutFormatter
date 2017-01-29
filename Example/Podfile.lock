@@ -1,0 +1,16 @@
+PODS:
+  - NumberSpellOutFormatter (0.1.0)
+
+DEPENDENCIES:
+  - NumberSpellOutFormatter (from `../`)
+
+EXTERNAL SOURCES:
+  NumberSpellOutFormatter:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NumberSpellOutFormatter: cf0786a665f51db877544c4453cd55474abcbd79
+
+PODFILE CHECKSUM: 8fe2d36c3a83e24857a2615716d77dd064f03cd1
+
+COCOAPODS: 1.2.0.rc.1

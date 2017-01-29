@@ -5,9 +5,30 @@
 [![License](https://img.shields.io/cocoapods/l/NumberSpellOutFormatter.svg?style=flat)](http://cocoapods.org/pods/NumberSpellOutFormatter)
 [![Platform](https://img.shields.io/cocoapods/p/NumberSpellOutFormatter.svg?style=flat)](http://cocoapods.org/pods/NumberSpellOutFormatter)
 
+
+Allows to spell out numbers in different languages and with many options, such as,
+ordinal numbers and whereever it is applicable, in masculine or feminine and in different
+grammatical cases.
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+Objective-C
+```
+NSLocale *selectedLocale = [NSLocale localeWithLocaleIdentifier:@"ru"];
+DMNumberSpellOutFormatter *formatter = [[DMNumberSpellOutFormatter alloc] initWithLocale: selectedLocale];
+
+[formatter setRuleSet:@"%spellout-ordinal-neuter-genitive"];
+
+NSLog(@"%s", [formatter stringFromInt: 55]);
+```
+
+Output:
+```
+пятьдесят пятого
+```
 
 ## Requirements
 
