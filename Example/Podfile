@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NumberSpellOutFormatter_Example' do
+  pod 'NumberSpellOutFormatter', :path => '../'
+
+  target 'NumberSpellOutFormatter_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
