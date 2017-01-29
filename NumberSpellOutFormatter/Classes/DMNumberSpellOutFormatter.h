@@ -1,6 +1,5 @@
 //
-//  OrdinalFormatter.h
-//  ordinalNumbersiOS
+//  DMNumberSpellOutFormatter.h
 //
 //  Created by Dmitry Matyukhin on 29/01/2017.
 //  Copyright © 2017 Dmitry Matyukhin. All rights reserved.

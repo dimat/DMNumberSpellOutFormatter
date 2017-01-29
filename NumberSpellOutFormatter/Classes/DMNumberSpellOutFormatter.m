@@ -1,6 +1,5 @@
 //
-//  OrdinalFormatter.m
-//  ordinalNumbersiOS
+//  DMNumberSpellOutFormatter.m
 //
 //  Created by Dmitry Matyukhin on 29/01/2017.
 //  Copyright © 2017 Dmitry Matyukhin. All rights reserved.
@@ -11,8 +10,6 @@
 #define U_DISABLE_RENAMING 1
 #define U_HIDE_DEPRECATED_API
 #include "unum.h"
-
-#define BUFFER_SIZE 768
 
 @interface DMNumberSpellOutFormatter ()
 {
