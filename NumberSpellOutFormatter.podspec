@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NumberSpellOutFormatter'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Spell out numbers in any language'
 
   s.description      = <<-DESC
-Allows to spell out numbers in different languages and with many options, such as,
-ordinal numbers and whereever it is applicable, in masculine or feminine and in different
-grammatical cases.
+Allows to spell out numbers in different languages and with many options. Unlike the standard NSNumberFormatter it
+also supports ordinal numbers with any additional modes that are applicable for specific language, such as gender
+(feminine and masculine) and grammatical cases.
                        DESC
 
   s.homepage         = 'https://github.com/dimat/DMNumberSpellOutFormatter'
