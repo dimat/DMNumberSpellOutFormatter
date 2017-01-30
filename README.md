@@ -1,22 +1,18 @@
 # NumberSpellOutFormatter
 
-[![CI Status](http://img.shields.io/travis/Dmitry Matyukhin/NumberSpellOutFormatter.svg?style=flat)](https://travis-ci.org/Dmitry Matyukhin/NumberSpellOutFormatter)
+[![CI Status](http://img.shields.io/travis/dimat/DMNumberSpellOutFormatter.svg?style=flat)](https://travis-ci.org/dimat/DMNumberSpellOutFormatter)
 [![Version](https://img.shields.io/cocoapods/v/NumberSpellOutFormatter.svg?style=flat)](http://cocoapods.org/pods/NumberSpellOutFormatter)
 [![License](https://img.shields.io/cocoapods/l/NumberSpellOutFormatter.svg?style=flat)](http://cocoapods.org/pods/NumberSpellOutFormatter)
 [![Platform](https://img.shields.io/cocoapods/p/NumberSpellOutFormatter.svg?style=flat)](http://cocoapods.org/pods/NumberSpellOutFormatter)
 
-
-Allows to spell out numbers in different languages and with many options, such as,
-ordinal numbers and whereever it is applicable, in masculine or feminine and in different
-grammatical cases.
-
+Allows to spell out numbers in different languages and with many options. Unlike the standard `NSNumberFormatter` it also supports ordinal numbers with any additional modes that are applicable for specific language, such as gender (feminine and masculine) and grammatical cases.
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 Objective-C
-```
+```Objective-C
 NSLocale *selectedLocale = [NSLocale localeWithLocaleIdentifier:@"ru"];
 DMNumberSpellOutFormatter *formatter = [[DMNumberSpellOutFormatter alloc] initWithLocale: selectedLocale];
 
@@ -25,12 +21,127 @@ DMNumberSpellOutFormatter *formatter = [[DMNumberSpellOutFormatter alloc] initWi
 NSLog(@"%s", [formatter stringFromInt: 55]);
 ```
 
+Swift:
+
+If there is `use_frameworks!` in `Podfile`, then add
+
+```swift
+import NumberSpellOutFormatter
+```
+
+```swift
+if let formatter = DMNumberSpellOutFormatter(locale: Locale(identifier: "ru")) {
+    formatter.setRuleSet("%spellout-ordinal-neuter-genitive")
+    print(formatter.string(from: 55)!)
+}
+```
+
 Output:
 ```
 пятьдесят пятого
 ```
 
-## Requirements
+For English locale:
+```
+fifty-fifth
+```
+
+For example, here is the list of supported rule sets for some languages:
+
+### English
+
+- Numbering Year
+- Numbering
+- Numbering Verbose
+- Cardinal
+- Cardinal Verbose
+- Ordinal
+- Ordinal Verbose
+
+### Spanish
+
+- Numbering Year
+- Numbering
+- Cardinal Masculine
+- Cardinal Feminine
+- Ordinal Masculine Adjective
+- Ordinal Masculine Plural
+- Ordinal Masculine
+- Ordinal Feminine Plural
+- Ordinal Feminine
+
+### Italian
+
+- Numbering Year
+- Numbering
+- Cardinal Masculine
+- Cardinal Feminine
+- Ordinal Masculine
+- Ordinal Feminine
+
+### Russian
+
+- Numbering Year
+- Numbering
+- Cardinal Masculine
+- Cardinal Neuter
+- Cardinal Feminine
+- Cardinal Plural
+- Cardinal Masculine Genitive
+- Cardinal Neuter Genitive
+- Cardinal Feminine Genitive
+- Cardinal Plural Genitive
+- Cardinal Masculine Dative
+- Cardinal Neuter Dative
+- Cardinal Feminine Dative
+- Cardinal Plural Dative
+- Cardinal Masculine Accusative
+- Cardinal Neuter Accusative
+- Cardinal Feminine Accusative
+- Cardinal Plural Accusative
+- Cardinal Masculine Locative
+- Cardinal Neuter Locative
+- Cardinal Feminine Locative
+- Cardinal Plural Locative
+- Cardinal Masculine Ablative
+- Cardinal Neuter Ablative
+- Cardinal Feminine Ablative
+- Cardinal Plural Ablative
+- Ordinal Masculine
+- Ordinal Neuter
+- Ordinal Feminine
+- Ordinal Plural
+- Ordinal Masculine Genitive
+- Ordinal Neuter Genitive
+- Ordinal Feminine Genitive
+- Ordinal Plural Genitive
+- Ordinal Masculine Dative
+- Ordinal Neuter Dative
+- Ordinal Feminine Dative
+- Ordinal Plural Dative
+- Ordinal Masculine Accusative
+- Ordinal Neuter Accusative
+- Ordinal Feminine Accusative
+- Ordinal Plural Accusative
+- Ordinal Masculine Locative
+- Ordinal Neuter Locative
+- Ordinal Feminine Locative
+- Ordinal Plural Locative
+- Ordinal Masculine Ablative
+- Ordinal Neuter Ablative
+- Ordinal Feminine Ablative
+- Ordinal Plural Ablative
+
+### French
+
+- Numbering Year
+- Numbering
+- Cardinal Masculine
+- Cardinal Feminine
+- Ordinal Masculine Plural
+- Ordinal Masculine
+- Ordinal Feminine Plural
+- Ordinal Feminine
 
 ## Installation
 
