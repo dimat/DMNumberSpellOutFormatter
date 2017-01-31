@@ -42,14 +42,7 @@ static NSString *cellReuseIdentifier = @"cell";
     NSLocale *currentLocale = [NSLocale currentLocale];
     for (NSString *localeId in testLocales) {
         
-        NSString *languageName;
-        
-        if ([currentLocale respondsToSelector:@selector(localizedStringForLanguageCode:)]) {
-            // for iOS >=10
-            languageName = [currentLocale localizedStringForLanguageCode:localeId];
-        } else {
-            languageName = [currentLocale displayNameForKey:NSLocaleLanguageCode value:localeId];
-        }
+        NSString *languageName = [currentLocale displayNameForKey:NSLocaleLanguageCode value:localeId];
         
         [self.languageSegmentedControl insertSegmentWithTitle:languageName atIndex:self.languageSegmentedControl.numberOfSegments animated:NO];
     }
