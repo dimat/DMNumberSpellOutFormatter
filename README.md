@@ -7,6 +7,17 @@
 
 Allows to spell out numbers in different languages and with many options. Unlike the standard `NSNumberFormatter` it also supports ordinal numbers with any additional modes that are applicable for specific language, such as gender (feminine and masculine) and grammatical cases.
 
+## IMPORTANT
+At the moment library uses ICU library that is shipped with iOS, however, the used API is not part of the iOS's publicly supported subsets.
+Therefore, last time when I tried to submit an app with it to AppStore, I received:
+
+> **Non-public API usage:**
+> 
+> The app references non-public symbols in Frameworks/NumberSpellOutFormatter.framework/NumberSpellOutFormatter: _unum_close, _unum_format, _unum_getTextAttribute, _unum_open, _unum_setTextAttribute
+
+
+The solution is to recompile ICU4C and embed it with the Framework. It should be done by the end of March, but if anyone could contribute, it would be very welcomed.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
