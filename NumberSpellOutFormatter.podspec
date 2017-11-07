@@ -33,9 +33,23 @@ also supports ordinal numbers with any additional modes that are applicable for 
   s.subspec 'precompiled' do |ss|
   	ss.source_files = 'icu4c-static-lib/include/**/*.h'
 	ss.private_header_files = 'icu4c-static-lib/include/**/*.h'
-	ss.vendored_libraries = 'icu4c-static-lib/lib/*.a'
+	ss.vendored_libraries = 'icu4c-static-lib/lib/**/*.a'
 
 	ss.header_mappings_dir = 'icu4c-static-lib/include'
 	ss.libraries = "c++"
+
+    # The libraries were not merged into a single fat libary, because the total size
+	# of one of the libs gets to 150M while GitHub only allows maximum 100M
+    
+	# This will prevent warnings about missing architectures
+	simulator_ldflags = '-l"c++" -l"icudata-simulator" -l"icui18n-simulator" -l"icuio-simulator" -l"icuuc-simulator"' 
+	arm_ldflags = '-l"c++" -l"icudata-arm" -l"icui18n-arm" -l"icuio-arm" -l"icuuc-arm"' 
+	ss.pod_target_xcconfig = {
+		'OTHER_LDFLAGS[arch=armv7]' => arm_ldflags,
+		'OTHER_LDFLAGS[arch=armv7s]' => arm_ldflags,
+		'OTHER_LDFLAGS[arch=arm64]' => arm_ldflags,
+		'OTHER_LDFLAGS[arch=i386]' => simulator_ldflags,
+		'OTHER_LDFLAGS[arch=x86_64]' => simulator_ldflags
+	}
   end
 end
