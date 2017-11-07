@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NumberSpellOutFormatter'
-  s.version          = '0.1.3'
+  s.version          = '0.2'
   s.summary          = 'Spell out numbers in any language'
 
   s.description      = <<-DESC
@@ -24,10 +24,18 @@ also supports ordinal numbers with any additional modes that are applicable for 
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = ['NumberSpellOutFormatter/Classes/**/*', 'NumberSpellOutFormatter/Private/**/*.h']
-  
-  s.public_header_files = 'NumberSpellOutFormatter/Classes/**/*.h'
-  s.private_header_files = 'NumberSpellOutFormatter/Private/**/*.h'
-  s.libraries = "icucore"
+  s.source_files = ['NumberSpellOutFormatter/Classes/**/*']
 
+  s.public_header_files = 'NumberSpellOutFormatter/Classes/*.h'
+
+  s.default_subspec = 'precompiled'
+
+  s.subspec 'precompiled' do |ss|
+  	ss.source_files = 'icu4c-static-lib/include/**/*.h'
+	ss.private_header_files = 'icu4c-static-lib/include/**/*.h'
+	ss.vendored_libraries = 'icu4c-static-lib/lib/*.a'
+
+	ss.header_mappings_dir = 'icu4c-static-lib/include'
+	ss.libraries = "c++"
+  end
 end

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0910"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2E55272F75DF4E8ED376165ED46BD266"
+               BlueprintIdentifier = "7A343E1AA1DA9C5C456E0EED4EAF7AAB"
                BuildableName = "NumberSpellOutFormatter.framework"
                BlueprintName = "NumberSpellOutFormatter"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2E55272F75DF4E8ED376165ED46BD266"
+            BlueprintIdentifier = "7A343E1AA1DA9C5C456E0EED4EAF7AAB"
             BuildableName = "NumberSpellOutFormatter.framework"
             BlueprintName = "NumberSpellOutFormatter"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">

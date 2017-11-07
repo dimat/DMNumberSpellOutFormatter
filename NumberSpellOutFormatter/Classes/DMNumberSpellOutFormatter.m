@@ -8,6 +8,8 @@
 #import "DMNumberSpellOutFormatter.h"
 
 #define U_DISABLE_RENAMING 1
+#define U_HAVE_LIB_SUFFIX 1
+#define U_LIB_SUFFIX_C_NAME_STRING "fg"
 #define U_HIDE_DEPRECATED_API
 #include "unum.h"
 
