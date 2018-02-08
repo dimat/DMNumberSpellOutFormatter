@@ -46,6 +46,13 @@
         return nil;
     }
     
+    if (status == U_USING_DEFAULT_WARNING) {
+        unum_close(_nf);
+        _nf = NULL;
+        
+        return nil;
+    }
+    
     return self;
 }
 
