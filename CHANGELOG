@@ -1,0 +1,6 @@
+1.0.0
+- If initialised with unsupported locale, return nil instead of using a default locale
+- Add unit tests
+
+0.2
+- Include precompiled icu4c library to avoid using private API
