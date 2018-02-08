@@ -2,10 +2,6 @@ use_frameworks!
 platform :ios, '8.0'
 
 target 'NumberSpellOutFormatter_Example' do
-  pod 'NumberSpellOutFormatter', :path => '../'
+  pod 'NumberSpellOutFormatter', :path => '../', :testspecs => ['Tests']
   inhibit_all_warnings!
-
-  target 'NumberSpellOutFormatter_Tests' do
-    inherit! :search_paths
-  end
 end

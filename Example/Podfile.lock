@@ -1,18 +1,20 @@
 PODS:
-  - NumberSpellOutFormatter (0.2):
-    - NumberSpellOutFormatter/precompiled (= 0.2)
-  - NumberSpellOutFormatter/precompiled (0.2)
+  - NumberSpellOutFormatter (1.0.0):
+    - NumberSpellOutFormatter/precompiled (= 1.0.0)
+  - NumberSpellOutFormatter/precompiled (1.0.0)
+  - NumberSpellOutFormatter/Tests (1.0.0)
 
 DEPENDENCIES:
   - NumberSpellOutFormatter (from `../`)
+  - NumberSpellOutFormatter/Tests (from `../`)
 
 EXTERNAL SOURCES:
   NumberSpellOutFormatter:
     :path: ../
 
 SPEC CHECKSUMS:
-  NumberSpellOutFormatter: c681bc3b9abb7bd85e0f892dd8f260d8960009f8
+  NumberSpellOutFormatter: 24de047b4fe7c7948e677344cfdd47d1388cfc4a
 
-PODFILE CHECKSUM: 89d6fbf8379b52028eefe04b6e5599ace49589dd
+PODFILE CHECKSUM: dac37676ed9345ddfb8902ebb3c9247ebf7b4248
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
