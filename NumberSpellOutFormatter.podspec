@@ -23,6 +23,7 @@ also supports ordinal numbers with any additional modes that are applicable for 
 	s.source					 = { :git => 'https://github.com/dimat/DMNumberSpellOutFormatter.git', :tag => s.version.to_s }
 
 	s.ios.deployment_target = '8.0'
+	s.swift_version = '3.2'
 
 	s.source_files = ['NumberSpellOutFormatter/Classes/**/*']
 
@@ -55,6 +56,6 @@ also supports ordinal numbers with any additional modes that are applicable for 
 
 	s.test_spec 'Tests' do |test_spec|
 		test_spec.source_files = 'NumberSpellOutFormatter/Tests/*.swift'
-		test_spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+		test_spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.2' }
 	end
 end
