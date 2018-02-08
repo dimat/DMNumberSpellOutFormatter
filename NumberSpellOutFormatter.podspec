@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'NumberSpellOutFormatter'
-  s.version          = '0.2'
-  s.summary          = 'Spell out numbers in any language'
+	s.name						 = 'NumberSpellOutFormatter'
+	s.version					 = '1.0.0'
+	s.summary					 = 'Spell out numbers in any language'
 
   s.description      = <<-DESC
 Allows to spell out numbers in different languages and with many options. Unlike the standard NSNumberFormatter it
