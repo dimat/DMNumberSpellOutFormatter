@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 	s.name						 = 'NumberSpellOutFormatter'
-	s.version					 = '1.0.1'
+	s.version					 = '1.1.0'
 	s.summary					 = 'Spell out numbers in any language'
 
 	s.description			 = <<-DESC

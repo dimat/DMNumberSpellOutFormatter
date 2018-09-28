@@ -1,8 +1,8 @@
 PODS:
-  - NumberSpellOutFormatter (1.0.0):
-    - NumberSpellOutFormatter/precompiled (= 1.0.0)
-  - NumberSpellOutFormatter/precompiled (1.0.0)
-  - NumberSpellOutFormatter/Tests (1.0.0)
+  - NumberSpellOutFormatter (1.1.0):
+    - NumberSpellOutFormatter/precompiled (= 1.1.0)
+  - NumberSpellOutFormatter/precompiled (1.1.0)
+  - NumberSpellOutFormatter/Tests (1.1.0)
 
 DEPENDENCIES:
   - NumberSpellOutFormatter (from `../`)
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NumberSpellOutFormatter: 9cca067cb39240db2f683043dda92c77684e879b
+  NumberSpellOutFormatter: cf1f79da4e905185a2ab3ba0309f4d6ea50489cc
 
 PODFILE CHECKSUM: 6fa02ad5bc21c4ced1791a729b5f3cc64a34e0a3
 

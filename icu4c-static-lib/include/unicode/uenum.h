@@ -23,7 +23,7 @@
 #include "unicode/localpointer.h"
 
 #if U_SHOW_CPLUSPLUS_API
-#include "unicode/strenum.h"
+#include "strenum.h"
 #endif
 
 /**

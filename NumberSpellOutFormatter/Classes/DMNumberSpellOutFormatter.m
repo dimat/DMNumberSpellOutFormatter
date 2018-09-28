@@ -80,7 +80,7 @@
         return _cachedRuleSets;
     }
     
-    UChar *ubuffer = malloc((len + 1) * sizeof(UChar));
+    UChar *ubuffer = (UChar *)malloc((len + 1) * sizeof(UChar));
     if (ubuffer == NULL) {
         @throw NSMallocException;
     }
@@ -105,7 +105,7 @@
     UErrorCode status = U_ZERO_ERROR;
     unum_setTextAttribute(_nf,
                           UNUM_DEFAULT_RULESET,
-                          ruleSetData.bytes, (int32_t)ruleSetData.length / sizeof(UChar),
+                          (const UChar *)ruleSetData.bytes, (int32_t)ruleSetData.length / sizeof(UChar),
                           &status);
     
     return U_SUCCESS(status);
@@ -118,7 +118,7 @@
         return nil;
     }
     
-    UChar *buffer = malloc((len + 1) * sizeof(UChar));
+    UChar *buffer = (UChar *)malloc((len + 1) * sizeof(UChar));
     
     status = U_ZERO_ERROR;
     unum_format(_nf, number, buffer, len + 1, nil, &status);
