@@ -15,6 +15,20 @@
 #include "translit.h"
 #include "strenum.h"
 
+#import "NSString+Japanese.h"
+
+@interface DMJapaneseTransliterator : NSObject<DMTransliteratorProtocol>
+
+@end
+
+@implementation DMJapaneseTransliterator
+
+- (NSString * _Nonnull) transliterate:(NSString * _Nonnull)str {
+    return [str stringByTransliteratingJapaneseToRomajiWithWordSeperator:@" "];
+}
+
+@end
+
 @interface DMTransliterator ()
 {
     Transliterator *_transliterator;
@@ -46,6 +60,14 @@
 
 + (instancetype)toLatin {
     return [[DMTransliterator alloc] initWithId:@"Any-Latin" direction:DMTransliteratorDirection_Forward];
+}
+
++ (NSObject<DMTransliteratorProtocol>*)toLatin:(NSString * _Nonnull)fromLanguage {
+    if ([fromLanguage hasPrefix:@"ja"]) {
+        return [[DMJapaneseTransliterator alloc] init];
+    }
+    
+    return [DMTransliterator toLatin];
 }
 
 - (instancetype _Nullable)initWithId:(NSString * _Nonnull)transliteratorId direction:(DMTransliteratorDirection)direction {

@@ -27,6 +27,13 @@ class TransliteratorTests: XCTestCase {
         XCTAssertEqual(t.transliterate("สวัสดี"), "s̄wạs̄dī")
     }
     
+    func testTransliterateFromJapanese() {
+        let t = DMTransliterator.toLatin("ja")
+        
+        XCTAssertEqual(t.transliterate("今日は"), "kyou ha")
+        XCTAssertEqual(t.transliterate("一"), "hito")
+    }
+    
     func testTransliterateRussian() {
         guard let t = DMTransliterator(id: "ru-zh", direction: .forward) else {
             XCTFail()

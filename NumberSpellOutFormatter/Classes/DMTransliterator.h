@@ -14,7 +14,13 @@ typedef NS_ENUM(NSUInteger, DMTransliteratorDirection) {
     DMTransliteratorDirection_Reverse = 1,
 };
 
-@interface DMTransliterator : NSObject
+@protocol DMTransliteratorProtocol <NSObject>
+
+- (NSString * _Nonnull) transliterate:(NSString * _Nonnull)str;
+
+@end
+
+@interface DMTransliterator : NSObject<DMTransliteratorProtocol>
 
 + (NSArray<NSString *> * _Nonnull)availableTransliterations;
 
@@ -23,6 +29,8 @@ typedef NS_ENUM(NSUInteger, DMTransliteratorDirection) {
 - (NSString * _Nonnull) transliterate:(NSString * _Nonnull)str;
 
 @property (class, nonatomic, assign, readonly) DMTransliterator* toLatin;
+
++ (NSObject<DMTransliteratorProtocol>*)toLatin:(NSString * _Nonnull)fromLanguage;
 
 @end
 
