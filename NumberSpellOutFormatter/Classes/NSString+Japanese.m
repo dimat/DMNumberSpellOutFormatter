@@ -219,7 +219,6 @@ char_class getCharClass(unichar c){
 //
 //
 -(NSString*)stringByTransliteratingJapaneseToRomajiWithWordSeperator:(NSString*)separator{
-    
     NSMutableString* aLatinString = [[NSMutableString alloc]init];
     
     // create a tokenizer
@@ -229,12 +228,12 @@ char_class getCharClass(unichar c){
                                                        kCFStringTokenizerUnitWord,
                                                        CFLocaleCreate(kCFAllocatorDefault, CFSTR("Japanese")));
     // goto the first token in the string
-    CFStringTokenizerTokenType result  =CFStringTokenizerAdvanceToNextToken(tok);
+    CFStringTokenizerTokenType result = CFStringTokenizerAdvanceToNextToken(tok);
     
     // enumerate until the end
-    while(result !=kCFStringTokenizerTokenNone){
+    while (result != kCFStringTokenizerTokenNone) {
         
-        CFTypeRef cTypeRef =  CFStringTokenizerCopyCurrentTokenAttribute(tok,kCFStringTokenizerAttributeLatinTranscription);
+        CFTypeRef cTypeRef = CFStringTokenizerCopyCurrentTokenAttribute(tok, kCFStringTokenizerAttributeLatinTranscription);
         
         if (separator && aLatinString.length > 0) {
             [aLatinString appendFormat:@"%@%@", separator, cTypeRef];
@@ -244,7 +243,7 @@ char_class getCharClass(unichar c){
         }
         CFRelease(cTypeRef);
         
-        result =CFStringTokenizerAdvanceToNextToken(tok);
+        result = CFStringTokenizerAdvanceToNextToken(tok);
         
         
     }
@@ -304,7 +303,7 @@ char_class getCharClass(unichar c){
                                                        kCFStringTokenizerUnitWord,
                                                        CFLocaleCreate(kCFAllocatorDefault, CFSTR("Japanese")));
     // goto the first token in the string
-    CFStringTokenizerTokenType result  =CFStringTokenizerAdvanceToNextToken(tok);
+    CFStringTokenizerTokenType result = CFStringTokenizerAdvanceToNextToken(tok);
     
     // enumerate the string
     while(result !=kCFStringTokenizerTokenNone){
