@@ -1,5 +1,5 @@
 use_frameworks!
-platform :ios, '8.0'
+platform :ios, '14.0'
 
 target 'NumberSpellOutFormatter_Example' do
   pod 'NumberSpellOutFormatter', :path => '../', :testspecs => ['Tests']

@@ -10,11 +10,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   NumberSpellOutFormatter:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  NumberSpellOutFormatter: 24de047b4fe7c7948e677344cfdd47d1388cfc4a
+  NumberSpellOutFormatter: 9cca067cb39240db2f683043dda92c77684e879b
 
-PODFILE CHECKSUM: dac37676ed9345ddfb8902ebb3c9247ebf7b4248
+PODFILE CHECKSUM: 6fa02ad5bc21c4ced1791a729b5f3cc64a34e0a3
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.11.3
